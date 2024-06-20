@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/6a761677-8511-4f7b-8bed-fc11d537e10b/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/SalesAIDemo-BFF",
+    "appService.deploySubpath": "."
+}
