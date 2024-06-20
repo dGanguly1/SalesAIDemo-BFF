@@ -4,7 +4,7 @@ import json
 import shutil
 import urllib.request
 from .constants import *
-# from azure.identity import DefaultAzureCredential 
+# from azure.identity import DefaultAzureCredential
 # from azure.ai.ml import MLClient
 # from azure.ai.ml.entities import IndexModelConfiguration, AzureAISearchConfig
 # from azure.core.exceptions import ResourceNotFoundError
