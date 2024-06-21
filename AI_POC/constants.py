@@ -1,11 +1,14 @@
-AZURE_API_KEY = "n331gFjmBSWzuSgvOtybYKrXKF6gVjGr"
-AZURE_BASE_ADDRESS = "https://debanshuganguly-9240-rgdbq.eastus.inference.ml.azure.com/score"
-AZURE_MODEL_DEPLOYMENT = "debanshuganguly-9240-rgdbq-1"
+AZURE_API_KEY = "jQilmBUhHBJgJP3LjWIjBu6VmNz5fr5U"
+AZURE_BASE_ADDRESS = "https://debanshuganguly-9240-dbnor.eastus.inference.ml.azure.com/score"
+AZURE_MODEL_DEPLOYMENT = "debanshuganguly-9240-dbnor-1"
 
 SUBSCRIPTION_ID = "6a761677-8511-4f7b-8bed-fc11d537e10b"
 RESOURCE_GROUP_NAME = "rg-Debanshu.Gangulyai"
-AZURE_SEARCH_CONNECTION_NAME = "sales-ai-poc-cs727532412549"
+AZURE_SEARCH_SERVICE_NAME = "sales-ai-poc-cs727532412549"
+AZURE_SEARCH_CONNECTION_NAME = "salesaipoccs727532412549"
+AZURE_OPENAI_CONNECTION_NAME = "SalesAIPOCOAI727532412549_aoai"
+AZURE_SEARCH_API_KEY = "7DsoCFBSkmCiVEsQxbtIpfoWt6kRePOa2lGICxndHGAzSeAT3WpF"
 AZURE_WORKSPACE_NAME = "debanshuganguly-9240"
 
-INDEX_NAME = ""
+INDEX_NAME = "sleepy-yogurt-b0sbf7yl4r"
 

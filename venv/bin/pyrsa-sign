@@ -1,4 +1,4 @@
-#!/Users/dganguly/Documents/Repos/Onbe/SalesAIPOC-BFF/venv/bin/python3.12
+#!/Users/dganguly/Documents/Repos/Onbe/SalesAIDemo-BFF/venv/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys

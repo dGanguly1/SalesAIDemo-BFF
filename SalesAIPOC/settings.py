@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-vvwj)#!jf-sk!3mzdi11f#_fvq%u9u71kr45r5vl1d2i34je*3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'salesaidemo-bff.azurewebsites.net',
+    # '127.0.0.1'
+]
 
 
 # Application definition
@@ -40,13 +43,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'AI_POC',
-    'corsheaders',
+    # 'corsheaders',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    'salesaidemo-bff.azurewebsites.net',
-    'https://zealous-ground-089646e10.5.azurestaticapps.net/'
-]
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:3000',
+# ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -56,7 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'SalesAIPOC.urls'
