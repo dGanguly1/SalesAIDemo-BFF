@@ -42,7 +42,6 @@ class AzureAIService:
         try:
             response = urllib.request.urlopen(req)
             result = response.read()
-            print(result)
             return result
         except urllib.error.HTTPError as error:
             error_info = {
