@@ -12,6 +12,8 @@ from azure.search.documents import SearchClient
 from azure.search.documents.indexes import SearchIndexClient
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.ml.entities import LocalSource
+import re
+from datetime import datetime
 
 
 def allowSelfSignedHttps(allowed): 
@@ -37,11 +39,15 @@ class AzureAIService:
             'Authorization': f'Bearer {api_key}',
             'azureml-model-deployment': AZURE_MODEL_DEPLOYMENT
         }
-        req = urllib.request.Request(url, data=body, headers=headers)
 
         try:
+            req = urllib.request.Request(url, data=body, headers=headers)
             response = urllib.request.urlopen(req)
-            result = response.read()
+            result = json.load(response)
+
+            with open("./sample-source.txt", "a") as f:
+                f.write("Success: "+ str(datetime.now().strftime("%Y%m%d%H%M%S") ) + str(result) + "\n")
+
             return result
         except urllib.error.HTTPError as error:
             error_info = {
@@ -49,6 +55,9 @@ class AzureAIService:
                 "headers": dict(error.headers),
                 "body": error.read().decode("utf8", 'ignore')
             }
+            with open("./sample-source.txt", "a") as f:
+                f.write("Error: "+ str(datetime.now().strftime("%Y%m%d%H%M%S") ) + str(error.read().decode("utf8", 'ignore')) + "\n")
+
             return json.dumps(error_info)
 
 

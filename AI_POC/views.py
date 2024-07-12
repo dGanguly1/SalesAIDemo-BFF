@@ -21,7 +21,7 @@ def chat(request):
         data = request.data
         azure_service = AzureAIService()
         result = azure_service.chat(data)
-        return JsonResponse(json.loads(result), safe=False)
+        return JsonResponse(result, safe=False)
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
 
