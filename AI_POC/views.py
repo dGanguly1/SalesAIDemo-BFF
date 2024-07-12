@@ -1,9 +1,8 @@
-import json
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from .service import AzureAIService, AzureMLService
-import os
 import base64
+from datetime import datetime
 
 # Constants
 from .constants import *
@@ -21,6 +20,10 @@ def chat(request):
         data = request.data
         azure_service = AzureAIService()
         result = azure_service.chat(data)
+
+        with open("./sample-source.txt", "a") as f:
+            f.write("Log: "+ str(datetime.now().strftime("%Y%m%d%H%M%S") ) + str(result) + "\n")
+
         return JsonResponse(result, safe=False)
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
